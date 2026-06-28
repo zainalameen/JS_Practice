@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Content Changer</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <section class="tabs-container">
+        <div class="tabs">
+            <div id="tab1">First Tab</div>
+            <div id="tab2">Second Tab</div>
+            <div id="tab3">Third Tab</div>
+            <div id="tab4">Fourth Tab</div>
+        </div>
+
+        <p>Clicking each tab should hide the content of the other tab and show the content of clicked tab, By default, enable the first tab.</p>
+        
+        <div class="tab-content"></div>
+
+        <p>dummy text under the tab content</p>
+    </section>
+
+    <script>
+        const tab1 = document.getElementById('tab1');
+        const tab2 = document.getElementById('tab2');
+        const tab3 = document.getElementById('tab3');
+        const tab4 = document.getElementById('tab4');
+        const tabContent = document.querySelector('.tab-content');
+
+        tab1.addEventListener('click', function () {
+            tabContent.innerHTML = '<p>You have selected the first tab</p>';
+            tab1.style.textDecoration = "underline";
+            tab2.style.textDecoration = "none";
+            tab3.style.textDecoration = "none";
+            tab4.style.textDecoration = "none";
+        });
+
+        tab2.addEventListener('click', function () {
+            tabContent.innerHTML = '<p>You have selected the second tab</p>';
+            tab1.style.textDecoration = "none";
+            tab2.style.textDecoration = "underline";
+            tab3.style.textDecoration = "none";
+            tab4.style.textDecoration = "none";
+        });
+
+        tab3.addEventListener('click', function () {
+            tabContent.innerHTML = '<p>You have selected the third tab</p>';
+            tab1.style.textDecoration = "none";
+            tab2.style.textDecoration = "none";
+            tab3.style.textDecoration = "underline";
+            tab4.style.textDecoration = "none";
+        });
+
+        tab4.addEventListener('click', function () {
+            tabContent.innerHTML = '<p>You have selected the fourth tab</p>';
+            tab1.style.textDecoration = "none";
+            tab2.style.textDecoration = "none";
+            tab3.style.textDecoration = "none";
+            tab4.style.textDecoration = "underline";
+        });
+
+        tab1.click();
+    </script>
+</body>
+
+
+</html>
