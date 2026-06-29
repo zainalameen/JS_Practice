@@ -31,6 +31,10 @@ body {
     cursor: pointer;
 }
 
+.tabs div.active {
+    text-decoration: underline;
+}
+
 .tab-content{
     background-color: gainsboro;
     border-radius: 10px;
